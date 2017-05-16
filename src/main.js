@@ -4,7 +4,7 @@ import ReactDom from 'react-dom';
 require('es6-promise').polyfill();
 require('isomorphic-fetch');
 
-class Pages extends React.Component {
+class Article extends React.Component {
 	constructor() {
 		super();
 		this.state = {
@@ -25,8 +25,8 @@ class Pages extends React.Component {
 			<div>
 				{this.state.posts.map(post => (
 					<div>
-						<b>{thread.label}</b>
-						<b>{thread.text}</b>
+						<span>{post.label}</span>
+						<span>{post.text}</span>
 					</div>
 				))}
 			</div>
@@ -35,6 +35,6 @@ class Pages extends React.Component {
 }
 
 ReactDom.render(
-	<Pages/>,
+	<Article/>,
 	document.getElementById('root')
 )

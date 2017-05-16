@@ -9,19 +9,16 @@ app.use(serve('public'));
 app.use(router.routes());
 app.listen(3000);
 
-// router.get('/post', function* () {
-// 	this.body = [
-// 		{
-// 			label: '1dog',
-// 			text: '1dog'
-// 		},
-// 		{
-// 			label: '1cat',
-// 			text: '1cat'
-// 		}
-// 	];
-// })
+router.get('/post', function* () {
+	this.body = [
+		{
+			label: '1dog',
+			text: '2dog'
+		},
+		{
+			label: '1cat',
+			text: '2cat'
+		}
+	];
+})
 
-router.get('/', function *(next) {
-    this.body = 'Hello World!';
-  })
